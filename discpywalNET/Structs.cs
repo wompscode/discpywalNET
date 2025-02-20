@@ -1,14 +1,16 @@
 ﻿using Discord;
 
-namespace TimCSweeney;
+namespace discpywalNET;
 
 public static class Structs
 {
-    public struct RegEx
+    public enum Response
     {
-        public string Pattern { get; init; }
-        public string Emote { get; init; }
-        public bool CustomEmoji { get; init; }
+        NoChange,
+        Failed,
+        Success,
+        NoRole,
+        FatalFailure
     }
 
     public struct Activity
