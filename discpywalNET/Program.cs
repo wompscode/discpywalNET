@@ -44,7 +44,7 @@ internal static class Program
         
         var token = await File.ReadAllTextAsync("token");
 
-        await _client.LoginAsync(TokenType.Bot, token);
+        await _client.LoginAsync(TokenType.Bot, token.Trim());
         await _client.StartAsync();
 
         await Task.Delay(-1);
